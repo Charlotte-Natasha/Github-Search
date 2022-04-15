@@ -1,15 +1,15 @@
 <header>
-    <p>
-        <mat-toolbar color="primary">
-          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <mat-icon>menu</mat-icon>
-          </button>
-          <span>My App</span>
-          <span class="example-spacer"></span>
-          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-            <mat-icon>favorite</mat-icon>
-          </button>
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        </mat-toolbar>
-      </p>
+  <p>
+    <mat-toolbar color="primary">
+      <span class="text-uppercase">GitHub-Charlotte</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+  </p>
   </header>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Github User</mat-label>
+      <input matInput #message maxlength="256" placeholder="">
+    </mat-form-field>
+    <button mat-raised-button color="primary">Search</button>
+  </form>
