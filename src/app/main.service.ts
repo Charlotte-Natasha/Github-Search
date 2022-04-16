@@ -1,4 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
 
 
 @Injectable({
@@ -6,5 +9,12 @@ import { Injectable } from '@angular/core';
 })
 export class MainService {
 
-  constructor() { }
+  constructor(private httpClient:HttpClientModule) { }
+
+  //for github profile
+  //public getProfile(searchQuery){
+   //let dataUrl = `https://api.github.com/users/${searchQuery}`;
+ // }
+
+  //for github repos
 }

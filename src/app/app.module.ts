@@ -9,6 +9,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { MainComponent } from './components/main/main.component';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+import { MainService } from './main.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +25,11 @@ import {MatInputModule} from '@angular/material/input';
     MatToolbarModule,
     MatIconModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MainService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

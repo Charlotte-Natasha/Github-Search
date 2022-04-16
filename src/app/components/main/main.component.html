@@ -6,10 +6,12 @@
     </mat-toolbar>
   </p>
   </header>
-  <form class="example-form">
+  <form class="example-form " (submit)="searchUser()">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Github User</mat-label>
-      <input matInput #message maxlength="256" placeholder="">
+      <input matInput name="user"  maxlength="256" placeholder="">
     </mat-form-field>
-    <button mat-raised-button color="primary">Search</button>
+    <input type="submit" value="Search" >
   </form>
+
+  
