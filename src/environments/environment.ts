@@ -7,7 +7,7 @@ export const environment = {
 
   key: "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"
 
-  
+
 };
 
 /*

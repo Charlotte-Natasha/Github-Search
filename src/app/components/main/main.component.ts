@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from 'src/app/main.service';
 
 @Component({
   selector: 'app-main',
@@ -7,15 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-//public githubUser: string;
+users:any
 
-  constructor() { }
+  constructor(private userService:MainService) { 
 
-  public searchUser(){
-    
+    this.searchUsers();
   }
 
   ngOnInit(): void {
   }
+
+searchUsers(){
+this.userService.getUsers().subscribe((search)=>{
+  console.log(search)
+
+  this.users=search
+})
+}
 
 }

@@ -12,11 +12,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { MainService } from './main.service';
+import { RepositoriesComponent } from './components/repositories/repositories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    RepositoriesComponent
   ],
   imports: [
     BrowserModule,

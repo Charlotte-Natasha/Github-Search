@@ -6,12 +6,15 @@
     </mat-toolbar>
   </p>
   </header>
-  <form class="example-form " (submit)="searchUser()">
+  <form class="example-form ">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Github User</mat-label>
       <input matInput name="user"  maxlength="256" placeholder="">
     </mat-form-field>
     <input type="submit" value="Search" >
+
+    <p> {{users.company}}</p>
+    <img src="{{users.avatar_url}}" alt="">
   </form>
 
   

@@ -1,6 +1,7 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment'; 
 
 
 
@@ -9,12 +10,16 @@ import { Observable } from 'rxjs';
 })
 export class MainService {
 
-  constructor(private httpClient:HttpClientModule) { }
+  constructor(private http:HttpClient) { }
 
-  //for github profile
-  //public getProfile(searchQuery){
-   //let dataUrl = `https://api.github.com/users/${searchQuery}`;
- // }
+  userName= "UnplugCharger"
+  
 
-  //for github repos
+  getUsers():Observable<any> {
+    const url=`https://api.github.com/users/${this.userName}?${environment.key}`
+
+    return this.http.get<any> (url)
+  }
+
+  
 }
