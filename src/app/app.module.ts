@@ -13,6 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { MainService } from './main.service';
 import { RepositoriesComponent } from './components/repositories/repositories.component';
+import {matMenuAnimations, MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RepositoriesComponent } from './components/repositories/repositories.co
     FormsModule,
     MatInputModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule
   ],
   providers: [MainService],
   bootstrap: [AppComponent]

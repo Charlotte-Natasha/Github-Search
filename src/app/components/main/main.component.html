@@ -3,18 +3,37 @@
     <mat-toolbar color="primary">
       <span class="text-uppercase">GitHub-Charlotte</span>
       <span class="example-spacer"></span>
+      <span class="material-icons">notifications</span>
+      <button mat-button [matMenuTriggerFor]="menu"> <i class="material-icons">add</i> </button>
+      
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>New repository</button>
+  <button mat-menu-item>Import repository</button>
+  <button mat-menu-item>New gist</button>
+  <button mat-menu-item>New organization</button>
+  <button mat-menu-item>New project</button>
+</mat-menu>
     </mat-toolbar>
+    
   </p>
   </header>
-  <form class="example-form ">
+  <form class="example-form text-center">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Github User</mat-label>
       <input matInput name="user"  maxlength="256" placeholder="">
+      
     </mat-form-field>
     <input type="submit" value="Search" >
 
-    <p> {{users.company}}</p>
-    <img src="{{users.avatar_url}}" alt="">
+    <!--<p> {{users.company}}</p>
+    -->
   </form>
+  <div class="main-body container">
+<div class="row">
+  <div class="col-sm-3">
+    <img src="{{users.avatar_url}}" class="rounded-circle img-fluid" alt="">
+  </div>
+</div>
+  </div>
 
   
