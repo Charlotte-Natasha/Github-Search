@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment'; 
@@ -20,8 +20,12 @@ export class MainService {
 
     this.userName= username;
     const url=`https://api.github.com/users/${this.userName}`
-
-    return this.http.get<any> (url)
+    return this.http.get<any> (url, {
+      headers: new HttpHeaders({
+        Authorization: environment.key
+      })
+    })
+    
   }
  
 getRepos(username:string):Observable<any> {
