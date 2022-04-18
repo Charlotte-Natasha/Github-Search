@@ -1,1 +1,23 @@
-<h1>Michael</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <mat-card class="example-card" >
+                <mat-card-subtitle>Repository Name: <span> {{repos.name}} </span> </mat-card-subtitle>
+                <mat-card-title></mat-card-title>
+                <img mat-card-sm-image src="" alt="">
+                <mat-card-content>
+                  <p>This card has divider and indeterminate progress as footer</p>
+                  
+                </mat-card-content>
+                <mat-divider inset></mat-divider>
+                <mat-card-actions>
+
+                 <a class=" btn-sm bg-warning" href="">View repo</a>
+                </mat-card-actions>
+                <mat-card-footer>
+                  <mat-progress-bar mode="buffer"></mat-progress-bar>
+                </mat-card-footer>
+              </mat-card>
+        </div>
+    </div>
+</div>

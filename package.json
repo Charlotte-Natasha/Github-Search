@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "angular-bootstrap-md": "^13.0.0",
+    "angular-gauge": "^4.0.0",
     "mdb-ui-kit": "^3.11.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

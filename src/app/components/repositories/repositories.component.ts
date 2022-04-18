@@ -8,22 +8,34 @@ import { MainService } from 'src/app/main.service';
 })
 export class RepositoriesComponent implements OnInit {
 
-  repos:any
+  repos:any;
+  term!: string
+  date = new Date ('2022-04-17')
+  dets: any
+  interval:any
 
   constructor(private repoService:MainService) { 
 
     //this.searchRepos();
+    //this.updateDets();
   }
 
   ngOnInit(): void {
   }
 
-  //searchRepos(){
-   // this.repoService.getRepos().subscribe((search)=>{
-   //   console.log(search)
-    
-    //  this.repos=search
-   // })
-   // }
+  //updateDets(){
 
-}
+    //this.interval = setInterval(() => {
+     // this.dets =Date.now();
+     // let upas:any = new Date(this.repos.updated_at)
+      //this.dets = this.dets - upas;
+   // }, 1000)
+    
+   // }
+    
+  }
+
+  
+
+ 
+

@@ -1,6 +1,5 @@
-<header>
-    
-      <mat-toolbar color="primary">
+     <div class="card">
+     <mat-toolbar color="primary">
         <span class="text-uppercase">GitHub-Charlotte</span>
         <span class="example-spacer"></span>
         <span class="material-icons">notifications</span>
@@ -13,13 +12,22 @@
     <button mat-menu-item>New organization</button>
     <button mat-menu-item>New project</button>
   </mat-menu>
-  <a routerLink="main">Users</a>
+  <a routerLink="main">	<mat-icon>perm_identity</mat-icon></a>
   <a routerLink="repo">Repos</a>
       </mat-toolbar>
       
+      <form class="example-form search text-center">
+        <mat-form-field class="example-full-width " >
+          <mat-label>Github User</mat-label>
+          <input matInput  maxlength="256" placeholder="">
+          
+        </mat-form-field>
+
+        <input type="submit" value="Search" >
+      </form>
+    </div>
+
    
-
-    </header>
-
+<!--[(ngModel)]="username" name="username" (keyup)="findProfile()-->
 
 <router-outlet></router-outlet>

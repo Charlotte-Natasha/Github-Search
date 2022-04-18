@@ -1,55 +1,49 @@
-
-  <form class="example-form text-center">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Github User</mat-label>
-      <input matInput name="user"  maxlength="256" placeholder="">
-      
-    </mat-form-field>
-    <input type="submit" value="Search" >
-
-    <!--<p> {{users.company}}</p>
-    -->
-  </form>
-  <div class="main-body container" *ngIf="users">
+<div class="main-body container" *ngIf="users">
 <div class="row">
   <div class="col-sm-3">
     <img src="{{users.avatar_url}}" class="rounded-circle img-fluid" alt="Profile Image">
+   <!-- {{users.name}} <small>({{users.login}})</small> 
+    <span> Works at:{{users.company}}</span>
+  {{users.location}}-->
   </div>
+
+
+  <!--User Info-->
   <div class="col-sm-5">
     <ul class="list-group">
-      <li *ngIf="users.bio"> {{users.bio}} </li>
+      <li class="list-group-item" *ngIf="users.bio"> {{users.bio}} </li>
       <li *ngIf="users.bio"> Available for hire.</li>
       <li *ngIf="users.email"> <a href="emailto:{{users.email}}">{{users.email}} </a> </li>
       <li *ngIf="users.blog"> <a href="{{users.blog}}" target="_blank"></a> </li>
     </ul>
   </div>
-  <div class="col-sm-4">
-    <div>
-      <p>
-        <span class="badge bg-warning ms-2"> {{users.followers}} Followers</span>
-        <span class="badge bg-primary ms-2"> {{users.following}} Following</span>
-        <span class="badge bg-success ms-2"> {{users.public_gists}} Public gists</span>
-        <span class="badge bg-danger ms-2"> {{users.public_repos}} Public repositories</span>
-      </p>
-      <p> <a href="{{users.html_url}}" target="_blank" class="btn btn-sm bg-warning" >View profile on Github</a> </p>
 
-      <div class="repo-default">
-        <div class="repo-body" >
-          <div class="repo-default">
-            <div class="repo-heading">
-        <h3 class="repo-titles">Repos</h3>
-            </div>
-            <div class="repo-body" *ngFor="let repo of repos">
-              <p> {{repo.created_at}} </p>
-              <p> {{repo.owner.login}} </p>
-              <p> {{repo.name}} </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!--Details-->
+ <div class="col-sm-4">
+   <div>
+     <p>
+      <span class="badge bg-warning "> {{users.followers}} Followers</span>
+      <span class="badge bg-primary "> {{users.following}} Following</span>
+      <span class="badge bg-success "> {{users.public_gists}} Public gists</span>
+      <span class="badge bg-danger ms-2"> {{users.public_repos}} Public repositories</span>
+     </p>
+     <p> <a href="{{users.html_url}}" target="_blank" class="btn btn-sm bg-warning" >View profile on Github</a> </p>
+
+     <!--Repo-->
+<div class="repo-default">
+  <div class="repo-heading">
+    <h3 class="repo-title">Repos</h3>
+  </div>
+  <div class="repo-body" *ngFor="let repo of repos">
+    <p class="clearfix">
+{{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm bg-warning float-end">View this project on Github</a>
+    </p>
+    <p> {{repo.description}} </p>
   </div>
 </div>
-  </div>
+   </div>
+ </div>
+</div>
+ 
 
   
