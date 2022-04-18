@@ -1,4 +1,25 @@
+<header>
+    
+      <mat-toolbar color="primary">
+        <span class="text-uppercase">GitHub-Charlotte</span>
+        <span class="example-spacer"></span>
+        <span class="material-icons">notifications</span>
+        <button mat-button [matMenuTriggerFor]="menu"> <i class="material-icons">add</i> </button>
+        
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>New repository</button>
+    <button mat-menu-item>Import repository</button>
+    <button mat-menu-item>New gist</button>
+    <button mat-menu-item>New organization</button>
+    <button mat-menu-item>New project</button>
+  </mat-menu>
+  <a routerLink="main">Users</a>
+  <a routerLink="repo">Repos</a>
+      </mat-toolbar>
+      
+   
 
-<app-main></app-main>
-<app-repositories></app-repositories>
+    </header>
+
+
 <router-outlet></router-outlet>

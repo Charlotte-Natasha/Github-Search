@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from 'src/app/main.service';
 
 @Component({
   selector: 'app-repositories',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepositoriesComponent implements OnInit {
 
-  constructor() { }
+  repos:any
+
+  constructor(private repoService:MainService) { 
+
+    //this.searchRepos();
+  }
 
   ngOnInit(): void {
   }
+
+  //searchRepos(){
+   // this.repoService.getRepos().subscribe((search)=>{
+   //   console.log(search)
+    
+    //  this.repos=search
+   // })
+   // }
 
 }

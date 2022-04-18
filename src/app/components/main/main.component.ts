@@ -9,10 +9,12 @@ import { MainService } from 'src/app/main.service';
 export class MainComponent implements OnInit {
 
 users:any
+repos:any
 
-  constructor(private userService:MainService) { 
+  constructor(private userService:MainService, private repoService:MainService) { 
 
     this.searchUsers();
+    this.searchRepos();
   }
 
   ngOnInit(): void {
@@ -25,5 +27,13 @@ this.userService.getUsers().subscribe((search)=>{
   this.users=search
 })
 }
+
+searchRepos(){
+  this.repoService.getRepos().subscribe((search)=>{
+    console.log(search)
+  
+    this.repos=search
+  })
+  }
 
 }

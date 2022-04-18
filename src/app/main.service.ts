@@ -13,6 +13,7 @@ export class MainService {
   constructor(private http:HttpClient) { }
 
   userName= "UnplugCharger"
+  userRepo= ""
   
 
   getUsers():Observable<any> {
@@ -20,6 +21,12 @@ export class MainService {
 
     return this.http.get<any> (url)
   }
+ 
+getRepos():Observable<any> {
+  const url= `https://api.github.com/users/${this.userName}/repos?${environment.key}`
 
-  
+  return this.http.get<any> (url)
+}
+
+
 }
