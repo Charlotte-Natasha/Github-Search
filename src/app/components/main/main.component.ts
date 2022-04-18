@@ -14,8 +14,6 @@ username!: string;
 
   constructor(private userService:MainService, private repoService:MainService) { 
 
-    this.searchUsers();
-    //this.searchRepos();
   }
 
   ngOnInit(): void {
@@ -29,12 +27,12 @@ this.userService.getUsers(this.username).subscribe((search)=>{
 })
 }
 
-//searchRepos(){
-  //this.repoService.getRepos().subscribe((search)=>{
-    //console.log(search)
-  
-   // this.repos=search
- // })
-  //}
+searchRepos(){
+  this.repoService.getRepos(this.username).subscribe((search)=>{
+     this.repos=search
+console.log(search)
+     console.log(this.repos)
+ })
+  }
 
 }

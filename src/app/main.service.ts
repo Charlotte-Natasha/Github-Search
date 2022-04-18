@@ -12,7 +12,7 @@ export class MainService {
 
   constructor(private http:HttpClient) { }
 
-  userName= "vantablanta"
+  userName= "Charlotte-Natasha"
   userRepo= ""
   searchRepos= ""
 
@@ -24,11 +24,13 @@ export class MainService {
     return this.http.get<any> (url)
   }
  
-/*getRepos():Observable<any> {
-  const url= `https://api.github.com/users/${this.userName}/repos?${environment.key}`
+getRepos(username:string):Observable<any> {
+
+  this.userName= username;
+  const url= `https://api.github.com/users/${this.userName}/repos`
 
   return this.http.get<any> (url)
-}*/
+}
 
 //searchRepo(): Observable<any> {
   //const url = `https://api.github.com/search/repositories?q=${this.searchRepo}?$(environment.key)`
