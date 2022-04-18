@@ -16,18 +16,20 @@
   <a routerLink="repo">Repos</a>
       </mat-toolbar>
       
-      <form class="example-form search text-center">
+     <!-- <form class="example-form search text-center" >
         <mat-form-field class="example-full-width " >
           <mat-label>Github User</mat-label>
-          <input matInput  maxlength="256" placeholder="">
+          <input matInput [(ngModel)]="username" name="username" maxlength="256" placeholder="">
           
         </mat-form-field>
 
         <input type="submit" value="Search" >
-      </form>
+      </form>-->
+{{username}}
+
     </div>
 
    
-<!--[(ngModel)]="username" name="username" (keyup)="findProfile()-->
+<!--  (keyup)="findProfile()-->
 
 <router-outlet></router-outlet>

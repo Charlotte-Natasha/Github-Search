@@ -12,11 +12,13 @@ export class MainService {
 
   constructor(private http:HttpClient) { }
 
-  userName= "UnplugCharger"
+  userName= "vantablanta"
   userRepo= ""
-  
+  searchRepos= ""
 
-  getUsers():Observable<any> {
+  getUsers(username:string):Observable<any> {
+
+    this.userName= username;
     const url=`https://api.github.com/users/${this.userName}?${environment.key}`
 
     return this.http.get<any> (url)
@@ -28,5 +30,10 @@ getRepos():Observable<any> {
   return this.http.get<any> (url)
 }
 
+//searchRepo(): Observable<any> {
+  //const url = `https://api.github.com/search/repositories?q=${this.searchRepo}?$(environment.key)`
+
+ // return this.http.get<any> (url)
+//}
 
 }

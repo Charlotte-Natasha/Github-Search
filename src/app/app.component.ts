@@ -10,7 +10,7 @@ import { MainService } from './main.service';
 export class AppComponent {
   title = 'Github';
 
-  //findUser(){
-  //  this.MainService.updateUser(this.username)
- // }
+  username!: string;
+
+
 }

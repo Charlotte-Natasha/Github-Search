@@ -10,30 +10,31 @@ export class MainComponent implements OnInit {
 
 users:any
 repos:any
+username!: string;
 
   constructor(private userService:MainService, private repoService:MainService) { 
 
     this.searchUsers();
-    this.searchRepos();
+    //this.searchRepos();
   }
 
   ngOnInit(): void {
   }
 
 searchUsers(){
-this.userService.getUsers().subscribe((search)=>{
-  console.log(search)
-
+this.userService.getUsers(this.username).subscribe((search)=>{
+  //console.log(search)
+console.log(this.username)
   this.users=search
 })
 }
 
-searchRepos(){
-  this.repoService.getRepos().subscribe((search)=>{
-    console.log(search)
+//searchRepos(){
+  //this.repoService.getRepos().subscribe((search)=>{
+    //console.log(search)
   
-    this.repos=search
-  })
-  }
+   // this.repos=search
+ // })
+  //}
 
 }
