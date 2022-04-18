@@ -24,7 +24,7 @@ username!: string;
 searchUsers(){
 this.userService.getUsers(this.username).subscribe((search)=>{
   //console.log(search)
-console.log(this.username)
+//console.log(this.username)
   this.users=search
 })
 }

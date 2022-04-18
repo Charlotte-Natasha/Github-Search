@@ -5,11 +5,10 @@
     
   </mat-form-field>
 
-  <input type="submit" value="Search" >
+  <button (click)="searchUsers()">Submit</button>
 </form>
 
-{{username}}
-<div class="main-body container" *ngIf="users">
+<div class="main-body container" *ngIf="username">
 <div class="row">
   <div class="col-sm-3">
     <img src="{{users.avatar_url}}" class="rounded-circle img-fluid" alt="Profile Image">
