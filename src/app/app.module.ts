@@ -19,12 +19,14 @@ import {matMenuAnimations, MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDividerModule} from '@angular/material/divider';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
