@@ -1,11 +1,11 @@
 <form class="example-form search text-center" >
   <mat-form-field class="example-full-width " >
-    <mat-label>Github User</mat-label>
+    <mat-label class="text-light">Github User</mat-label>
     <input matInput [(ngModel)]="username" name="username" maxlength="256" placeholder="">
     
   </mat-form-field>
 
-  <button mat-raised-button  color="accent" (click)="searchUsers(); searchRepos()">Submit</button>
+  <button mat-raised-button (click)="searchUsers(); searchRepos()">Submit</button>
 </form>
 
 <div class="main-body container" *ngIf="username" >
@@ -52,7 +52,7 @@
   </div>
   <div class="repo-body" *ngFor="let repo of repos" >
     <p class="clearfix row">
-{{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm bg-warning float-end">View this project on Github</a>
+{{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm bg-warning float-end">View repo on Github</a>
     </p>
     <p> {{repo.description}} </p>
   </div>

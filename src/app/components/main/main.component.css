@@ -1,3 +1,11 @@
-mat-grid-tile {
-    background: lightblue;
-  }
+.search{
+  margin: 20vh auto;
+  padding: 80px 80px;
+    width: 90vh;
+    background-size: 70% 80%;
+    background-color: #360770;
+    background-position: center right;
+    border: 1px solid rgba(255, 110, 212, 1);
+    box-shadow: 4px 4px 4px rgba(221, 110, 255, 1);
+    border-radius: 10px;
+}
