@@ -23,9 +23,12 @@ Youtube
 
 Angular Docs
 
-## Build
+## Description
+Github Search is an Angular application that does the following;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Displays users Github details e.g name and repositories.
+Searches the Github members by use of the username or repository name.
+Logs the information to the user.
 
 ## Running unit tests
 
